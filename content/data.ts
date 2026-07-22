@@ -30,8 +30,14 @@ export const profile = {
     github: "https://github.com/meherabmehu",
     kaggle: "https://www.kaggle.com/mdmeherabhossain",
   },
+  // Short one-liner shown big in the Hero — keep this punchy, not a full bio.
+  tagline: "I turn research papers and messy data into AI systems that actually ship.",
   summary:
     "Computer Science & Engineering undergraduate (CGPA 3.52/4.00) building end-to-end AI systems across computer vision, NLP/LLMs, and time-series forecasting — First Runner-Up at three national AI competitions. Experienced across the full ML lifecycle, from large-scale feature engineering and gradient-boosted/deep models to LLM/RAG pipelines and FastAPI deployment. Targeting AI/ML Engineer, Data Scientist, and Research Engineer roles.",
+  // Second paragraph shown only in the About section, for extra detail/story
+  // beyond the summary above (which also doubles as the page's meta description).
+  bioDetail:
+    "My work usually starts the same way: pick a problem that actually matters — churn, traffic safety, air quality, medical triage — and push a model past the notebook into something with an API, a UI, or a live inference pipeline behind it. I'm currently finishing my undergraduate thesis on PM2.5 forecasting for Dhaka, competing in national AI hackathons and datathons on the side, and looking for an AI/ML Engineer, Data Scientist, or Research Engineer role where I can keep doing both.",
   resumeFile: "/Meherab_Hossain_Resume.pdf", // place a PDF with this name in /public to enable the "Download Resume" button
 };
 
