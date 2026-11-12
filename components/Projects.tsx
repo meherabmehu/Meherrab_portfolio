@@ -11,13 +11,13 @@ export default function Projects() {
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <p className="section-heading">Projects</p>
-              <h2 className="text-4xl font-semibold tracking-[-.04em] sm:text-5xl">Software built for real problems.</h2>
+              <h2 className="text-4xl font-semibold tracking-[-.04em] sm:text-5xl">Projects I&apos;ve built</h2>
               <p className="mt-4 max-w-2xl text-muted">
-                Product engineering and applied AI across healthcare, finance, and machine learning.
+                From full-stack products to applied AI. Explore my public repositories for more work.
               </p>
             </div>
             <a href="https://github.com/meherabmehu?tab=repositories" target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent transition hover:text-white">
-              GitHub profile <ArrowUpRight size={16} />
+              Explore all repositories <ArrowUpRight size={16} />
             </a>
           </div>
         </Reveal>

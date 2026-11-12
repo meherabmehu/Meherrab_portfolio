@@ -198,8 +198,16 @@ export const leadership: { role: string; org: string; points: string[] }[] = [
 // ----------------------------------------------------------------------------
 export const education: { degree: string; school: string }[] = [
   {
-    degree: "B.Sc. in Computer Science & Engineering",
+    degree: "B.Sc. in Computer Science & Engineering (In Progress)",
     school: "International University of Business Agriculture and Technology (IUBAT), Dhaka",
+  },
+  {
+    degree: "Higher Secondary Certificate · Science",
+    school: "Govt. Nalchity College",
+  },
+  {
+    degree: "Secondary School Certificate · Science",
+    school: "Nandikathi Adarsha Secondary School",
   },
 ];
 

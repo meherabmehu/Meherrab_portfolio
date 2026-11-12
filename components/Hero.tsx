@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowDown, ArrowUpRight, Trophy, Sparkles } from "lucide-react";
-import { profile, projects, achievements } from "@/content/data";
+import { profile } from "@/content/data";
 
 const facts = [
-  { icon: <Trophy size={14} />, label: `${achievements.filter((item) => item.highlight).length}× National Runner-Up` },
-  { icon: <Sparkles size={14} />, label: `${projects.length}+ AI / software projects` },
+  { icon: <Trophy size={14} />, label: "3× National 1st Runner-Up" },
+  { icon: <Sparkles size={14} />, label: "Top 5 · IIT Bombay Zonal" },
 ];
 
 export default function Hero() {
