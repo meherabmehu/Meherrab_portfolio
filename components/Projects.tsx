@@ -7,7 +7,7 @@ export default function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
       <Reveal>
         <p className="section-heading">Projects</p>
-        <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Selected Work</h2>
+        <h2 className="mb-4 text-3xl font-semibold tracking-tight sm:text-4xl">Selected work</h2>
         <p className="mb-12 max-w-2xl text-muted">
           A mix of competition-winning models, research projects, and full-stack systems — spanning computer
           vision, NLP/LLMs, and time-series forecasting.
@@ -17,7 +17,7 @@ export default function Projects() {
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={(i % 4) * 0.06} className={p.featured ? "sm:col-span-2 lg:col-span-1" : ""}>
-            <article className="card-hover flex h-full flex-col rounded-2xl border border-border bg-card/50 p-6">
+            <article className="card-hover flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-7">
               <div className="mb-3 flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold leading-snug text-ink">{p.title}</h3>
                 {p.githubUrl && (

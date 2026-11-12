@@ -7,7 +7,6 @@ import { profile } from "@/content/data";
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.headline}`,
   description: profile.summary,
-  metadataBase: new URL("https://example.com"),
   openGraph: {
     title: `${profile.name} — ${profile.headline}`,
     description: profile.summary,

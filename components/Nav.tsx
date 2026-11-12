@@ -28,12 +28,12 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "border-b border-border bg-surface/80 backdrop-blur-md" : "bg-transparent"
+        scrolled ? "border-b border-border bg-surface/90 backdrop-blur-md" : "bg-surface/55 backdrop-blur-sm"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2 font-mono text-sm font-semibold text-ink">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-gradient text-xs text-white">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-gradient text-xs text-white">
             {profile.initials}
           </span>
           <span className="hidden sm:inline">{profile.name.split(" ")[0]} {profile.name.split(" ").slice(-1)[0]}</span>
