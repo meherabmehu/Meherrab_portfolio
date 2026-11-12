@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 import { profile, projects, achievements } from "@/content/data";
 
 const stats = [
-  { label: "Selected projects", value: `${projects.length}` },
+  { label: "Projects", value: `${projects.length}` },
   { label: "National runner-up finishes", value: `${achievements.filter((a) => a.title.includes("Runner-Up")).length}` },
   { label: "Focus", value: "AI · Software" },
 ];

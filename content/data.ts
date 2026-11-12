@@ -132,166 +132,18 @@ export const projects: Project[] = [
     category: "Research & AI",
     featured: true,
   },
-  {
-    title: "Bangladesh Dengue 7-Day Onset Warning",
-    context: "Public-health ML research · development stage",
-    description: [
-      "Built a leakage-aware pipeline to study whether available signals can warn of dengue outbreak onset seven days ahead.",
-      "Compared seasonal and recent-trend rules with regularized logistic regression and LightGBM; the reserved 2025 test period remains unevaluated.",
-    ],
-    tech: ["Python", "LightGBM", "TCN", "GRU", "Time-Series Validation"],
-    githubUrl: "https://github.com/meherabmehu/bd-dengue-7day-onset-warning",
-    category: "Research & AI",
-    featured: true,
-  },
-  {
-    title: "GridWise — LLM Energy Optimizer",
-    context: "BUP CSE Fest 2026 · Online Preliminary · 10/10 official cases matched the published optimum",
-    description: [
-      "Turns short operator notes into validated, machine-checkable constraints for a 24-hour campus energy schedule.",
-      "Separates language-model interpretation from a deterministic linear-programming optimizer so schedules can be checked against the rules.",
-    ],
-    tech: ["Python", "FastAPI", "LLMs", "Linear Programming", "HiGHS"],
-    githubUrl: "https://github.com/meherabmehu/GridWise-LLM-Energy-Optimizer",
-    category: "Full-stack AI",
-  },
-  {
-    title: "Codebase Onboarding Agent",
-    context: "RAG-powered developer learning assistant",
-    description: [
-      "Built an assistant that explains a repository through its code and evolution history, with architecture mapping, learning plans, Q&A and quizzes.",
-      "Split the Streamlit learning interface from a FastAPI service for parsing, indexing and agent workflows.",
-    ],
-    tech: ["Python", "FastAPI", "Streamlit", "RAG", "Agent Workflows"],
-    githubUrl: "https://github.com/meherabmehu/codebase-onboarding-agent",
-    category: "Full-stack AI",
-  },
-  {
-    title: "Samsung Phone Query & Review System",
-    context: "RAG and multi-agent application · internship project",
-    description: [
-      "Scrapes Samsung phone specifications and reviews, stores structured records in PostgreSQL and serves them through a FastAPI application.",
-      "Uses retrieval-grounded answers for product questions and a multi-agent pipeline to analyze reviews.",
-    ],
-    tech: ["Python", "FastAPI", "PostgreSQL", "RAG", "Multi-agent AI"],
-    githubUrl: "https://github.com/meherabmehu/samsung-phone-query-review-system",
-    category: "Full-stack AI",
-  },
-  {
-    title: "Starship Safety — System Failure Prediction",
-    context: "Data Hackathon, 5th National Data Science Summit (NDSS) 2026, Daffodil International University — First Runner-Up",
-    description: [
-      "Recovered hidden patterns from 15 obfuscated features through hex decoding, temperature parsing, and coordinate analysis",
-      "Achieved 94.5% accuracy / 0.944 F1 (cross-validated) with an interpretable logistic-regression + ColumnTransformer pipeline",
-    ],
-    tech: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-    githubUrl: "https://github.com/meherabmehu/Starship-Safety-NDSS-2026",
-    category: "Research & AI",
-    featured: true,
-  },
-  {
-    title: "Multi-Agent Medical Assistant — RAG, Vision & Literature Search",
-    context: "Personal Project",
-    description: [
-      "Orchestrated four specialized agents with LangChain — medical image analysis (brain tumor, chest X-ray, skin lesion), document RAG, PubMed/web search, and safety guardrails",
-      "Implemented semantic retrieval over medical documents with Qdrant; Dockerized the service with GitHub Actions CI",
-    ],
-    tech: ["Python", "LangChain", "LLMs", "RAG", "Qdrant", "Computer Vision", "Docker", "GitHub Actions"],
-    githubUrl: "https://github.com/meherabmehu/Multi_Agent_Medical_Service",
-    category: "Full-stack AI",
-  },
-  {
-    title: "Bengali LLM Hallucination Detection",
-    context: "Kaggle Competition",
-    description: [
-      "Designed a macro-F1-optimized hybrid pipeline combining rule-based validation, Bengali Wikipedia retrieval, NLI scoring (mDeBERTa), and semantic similarity (LaBSE)",
-      "Integrated quantized LLM judges (Qwen2.5-7B 4-bit, Gemma via llama.cpp) for retrieval-augmented verification",
-    ],
-    tech: ["Python", "PyTorch", "Hugging Face Transformers", "llama.cpp", "RapidFuzz"],
-    githubUrl: "https://github.com/meherabmehu/Bengali-Hallucination-Detection",
-    category: "Research & AI",
-  },
-  {
-    title: "PM2.5 Air Quality Forecasting for Dhaka",
-    context: "Undergraduate Thesis (Ongoing)",
-    description: [
-      "Benchmarked LSTM, GRU, and ARIMA vs LightGBM, XGBoost, CatBoost for 24-hour-ahead forecasting on 2016–2022 data",
-      "Reached R² = 0.88 (LightGBM benchmark) using chronological splits, 24-hour-mean targets, and SHAP analysis",
-    ],
-    tech: ["Python", "TensorFlow", "LightGBM", "SHAP", "Time-Series Analysis"],
-    githubUrl: "https://github.com/meherabmehu/PM2.5-Air-Quality-Forecasting-for-Dhaka-",
-    category: "Research & AI",
-  },
-  {
-    title: "FinNova — Financial Transaction Risk Detection",
-    context: "Personal Project",
-    description: [
-      "Detected high-risk transactions under severe class imbalance with a threshold-optimized weighted ensemble of LightGBM, XGBoost, CatBoost, logistic regression, and a neural network",
-      "Achieved ROC-AUC 0.979, AUC-PR 0.891, and F1 0.895 via systematic EDA, feature engineering, and threshold tuning",
-    ],
-    tech: ["Python", "Scikit-learn", "LightGBM", "XGBoost", "CatBoost"],
-    githubUrl: "https://github.com/meherabmehu/finnova-risk-transaction-detection",
-    category: "Research & AI",
-  },
-  {
-    title: "Office Energy Monitor — IoT Energy Intelligence Platform",
-    context: "Personal Project",
-    description: [
-      "Built a real-time energy monitoring platform: FastAPI + SQLAlchemy backend, React + Chart.js dashboard, and WebSocket streaming from Wokwi-simulated ESP32 sensors",
-      "Added room-wise analytics and a Discord alert bot for high-usage, after-hours, and long-running-device events",
-    ],
-    tech: ["Python", "FastAPI", "React", "WebSockets", "SQLAlchemy", "ESP32", "IoT"],
-    githubUrl: "https://github.com/meherabmehu/office-energy-monitor",
-    category: "Full-stack AI",
-  },
-  {
-    title: "Vantage Robotics Simulator",
-    context: "Personal Project",
-    description: ["Browser-based robot-arm control with forward/inverse kinematics, built with React, TypeScript, and Three.js"],
-    tech: ["React", "TypeScript", "Three.js", "Robotics"],
-    githubUrl: "https://github.com/meherabmehu/vantage-robotics-simulator",
-    category: "Full-stack",
-  },
-  {
-    title: "Cirrhosis Outcome Prediction",
-    context: "Machine Learning Project",
-    description: ["Multi-class clinical outcome classification with EDA, feature engineering, and stratified cross-validation"],
-    tech: ["Python", "LightGBM", "Pandas", "Scikit-learn"],
-    githubUrl: "https://github.com/meherabmehu/Cirrhossis-Outcome-prediction",
-    category: "Research & AI",
-  },
 ];
 
-// ----------------------------------------------------------------------------
 // SKILLS — grouped by category, rendered as tag chips.
 // ----------------------------------------------------------------------------
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Programming", items: ["Python", "C++", "C", "Java", "JavaScript", "TypeScript", "SQL"] },
-  {
-    category: "Machine Learning",
-    items: [
-      "Scikit-learn", "LightGBM", "XGBoost", "CatBoost", "Ensemble Learning",
-      "Survival Analysis", "Feature Engineering", "Cross-Validation", "Imbalanced Data", "SHAP",
-    ],
-  },
-  { category: "Deep Learning", items: ["PyTorch", "TensorFlow", "CNN", "LSTM", "GRU", "Transfer Learning"] },
-  { category: "Computer Vision", items: ["YOLO11", "Ultralytics", "OpenCV", "Object Detection", "Image Classification"] },
-  {
-    category: "NLP & LLMs",
-    items: [
-      "Hugging Face Transformers", "LangChain", "RAG", "mDeBERTa", "LaBSE",
-      "Qwen2.5", "Gemma", "llama.cpp", "Prompt Engineering",
-    ],
-  },
-  {
-    category: "Backend & Data",
-    items: ["FastAPI", "REST APIs", "WebSockets", "SQLAlchemy", "JWT/OAuth2", "Node.js", "Pandas", "NumPy", "EDA"],
-  },
-  { category: "Databases", items: ["PostgreSQL", "MySQL", "SQLite", "Oracle", "SQL Server", "Qdrant"] },
-  { category: "Tools, DevOps & IoT", items: ["Git", "GitHub", "Docker", "GitHub Actions", "Jupyter", "Kaggle", "ESP32/Arduino", "Wokwi"] },
+  { category: "Languages", items: ["Python", "TypeScript", "JavaScript", "SQL"] },
+  { category: "Product Engineering", items: ["React", "Next.js", "Django", "FastAPI", "Node.js", "REST APIs"] },
+  { category: "Applied AI & ML", items: ["LLM Applications", "RAG", "Scikit-learn", "LightGBM", "XGBoost", "PyTorch"] },
+  { category: "Data", items: ["PostgreSQL", "Pandas", "NumPy", "Feature Engineering"] },
+  { category: "Engineering Tools", items: ["Git", "Docker", "GitHub Actions"] },
 ];
 
-// ----------------------------------------------------------------------------
 // ACHIEVEMENTS — competition wins and recognitions, most important first.
 // ----------------------------------------------------------------------------
 export const achievements: { title: string; note?: string; highlight?: boolean }[] = [

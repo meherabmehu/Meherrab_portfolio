@@ -1,30 +1,8 @@
-"use client";
-
-import { useMemo, useState } from "react";
-import { Github, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { Github, ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 import { projects } from "@/content/data";
 
-const filters = ["All work", "Full-stack AI", "Research & AI", "Full-stack"] as const;
-const INITIAL_COUNT = 6;
-
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("All work");
-  const [showAll, setShowAll] = useState(false);
-
-  const filteredProjects = useMemo(
-    () => activeFilter === "All work" ? projects : projects.filter((project) => project.category === activeFilter),
-    [activeFilter],
-  );
-  const visibleProjects = showAll || activeFilter !== "All work"
-    ? filteredProjects
-    : filteredProjects.slice(0, INITIAL_COUNT);
-
-  function changeFilter(filter: (typeof filters)[number]) {
-    setActiveFilter(filter);
-    setShowAll(false);
-  }
-
   return (
     <section id="projects" className="relative border-y border-border bg-surface/70 px-6 py-24 sm:py-28">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
@@ -32,40 +10,21 @@ export default function Projects() {
         <Reveal>
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="section-heading">Selected projects · 2025—26</p>
-              <h2 className="text-4xl font-semibold tracking-[-.04em] sm:text-5xl">Built to solve real problems.</h2>
+              <p className="section-heading">Projects</p>
+              <h2 className="text-4xl font-semibold tracking-[-.04em] sm:text-5xl">Software built for real problems.</h2>
               <p className="mt-4 max-w-2xl text-muted">
-                Recent product work, applied AI and research—from business copilots to TinyML running on an ESP32.
+                Product engineering and applied AI across healthcare, finance, and machine learning.
               </p>
             </div>
             <a href="https://github.com/meherabmehu?tab=repositories" target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent transition hover:text-white">
-              All GitHub repositories <ArrowUpRight size={16} />
+              GitHub profile <ArrowUpRight size={16} />
             </a>
           </div>
         </Reveal>
 
-        <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              role="tab"
-              aria-selected={activeFilter === filter}
-              onClick={() => changeFilter(filter)}
-              className={`rounded-full border px-4 py-2 text-xs font-medium transition sm:text-sm ${
-                activeFilter === filter
-                  ? "border-accent/60 bg-accent/10 text-accent shadow-[0_0_22px_-12px_rgba(92,225,230,.7)]"
-                  : "border-border bg-card/60 text-muted hover:border-accent/35 hover:text-ink"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-
         <div className="grid gap-4 md:grid-cols-2">
-          {visibleProjects.map((project, index) => (
-            <Reveal key={project.title} delay={(index % 4) * 0.045}>
+          {projects.map((project, index) => (
+            <Reveal key={project.title} delay={(index % 3) * 0.05}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/45 hover:bg-card sm:p-7">
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition group-hover:opacity-100" />
                 <div className="mb-7 flex items-center justify-between gap-3">
@@ -111,14 +70,6 @@ export default function Projects() {
             </Reveal>
           ))}
         </div>
-
-        {activeFilter === "All work" && filteredProjects.length > INITIAL_COUNT && (
-          <div className="mt-10 flex justify-center">
-            <button type="button" onClick={() => setShowAll((value) => !value)} className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition hover:border-accent/50 hover:text-accent">
-              {showAll ? <>Show selected <ChevronUp size={15} /></> : <>Explore all {filteredProjects.length} projects <ChevronDown size={15} /></>}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );

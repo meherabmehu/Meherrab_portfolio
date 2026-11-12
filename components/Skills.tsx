@@ -7,7 +7,7 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="section-heading">Skills</p>
-          <h2 className="mb-12 text-3xl font-bold sm:text-4xl">Technical Toolkit</h2>
+          <h2 className="mb-12 text-3xl font-bold sm:text-4xl">Core skills</h2>
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
