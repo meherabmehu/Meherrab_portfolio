@@ -13,7 +13,7 @@ export default function Achievements() {
         <h2 className="mb-12 text-3xl font-bold sm:text-4xl">Competitions &amp; Recognition</h2>
       </Reveal>
 
-      <div className="mb-8 grid gap-4 sm:grid-cols-3">
+      <div className="mb-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {highlights.map((a, i) => (
           <Reveal key={a.title} delay={i * 0.08}>
             <div className="card-hover h-full rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 via-card/60 to-card/60 p-5">

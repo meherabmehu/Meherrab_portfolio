@@ -8,7 +8,7 @@ export default function Education() {
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="section-heading">Education</p>
-          <h2 className="mb-12 text-3xl font-bold sm:text-4xl">Academic Background</h2>
+          <h2 className="mb-12 text-3xl font-semibold tracking-tight sm:text-4xl">University &amp; certifications</h2>
         </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -22,9 +22,6 @@ export default function Education() {
                   <div>
                     <h3 className="text-base font-semibold text-ink">{e.degree}</h3>
                     <p className="text-sm text-accent3">{e.school}</p>
-                    <p className="mt-1 text-sm text-muted">
-                      {e.period} · {e.note}
-                    </p>
                   </div>
                 </div>
               </Reveal>

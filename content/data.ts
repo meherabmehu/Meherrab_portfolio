@@ -33,7 +33,7 @@ export const profile = {
   // Short one-liner shown big in the Hero — keep this punchy, not a full bio.
   tagline: "I turn research papers and messy data into AI systems that actually ship.",
   summary:
-    "Software engineer and Computer Science & Engineering undergraduate (CGPA 3.52/4.00), building full-stack applications and end-to-end AI systems across computer vision, NLP/LLMs, and forecasting. First Runner-Up at three national AI competitions, with experience taking ideas from data and experiments into useful, working software.",
+    "Software engineer and Computer Science & Engineering undergraduate, building full-stack applications and end-to-end AI systems across computer vision, NLP/LLMs, and forecasting. Recognized at national AI competitions, with experience taking ideas from data and experiments into useful, working software.",
   // Second paragraph shown only in the About section, for extra detail/story
   // beyond the summary above (which also doubles as the page's meta description).
   bioDetail:
@@ -52,11 +52,37 @@ export type Project = {
   description: string[]; // bullet points
   tech: string[];
   githubUrl: string;
+  demoUrl?: string;
   category: string;
   featured?: boolean; // featured projects render larger in the grid
 };
 
 export const projects: Project[] = [
+  {
+    title: "SasthoSetu — Digital Healthcare Platform",
+    context: "AI-assisted health platform for Bangladesh · demo sandbox",
+    description: [
+      "Built bilingual symptom triage, doctor matching and booking, teleconsultation, and health-record workflows for patients and clinicians.",
+      "Connects verifiable prescriptions and FHIR R4 interoperability with support for people using basic phones or limited connectivity.",
+    ],
+    tech: ["Python", "FastAPI", "PostgreSQL", "AI", "FHIR R4", "Healthcare"],
+    githubUrl: "https://github.com/meherabmehu/SasthoSetu",
+    demoUrl: "https://sasthosetu.onrender.com",
+    category: "Full-stack AI",
+    featured: true,
+  },
+  {
+    title: "DustTwin — Construction Dust Monitoring",
+    context: "Top 5 · Bangladesh Zonal Round, InnovateX Future Habitats Challenge · Techfest IIT Bombay 2026",
+    description: [
+      "Designed a multi-page monitoring experience for construction-site dust, environmental sensing, and targeted misting scenarios.",
+      "Built interactive simulation and circuit-demo views for the team project; currently presented as a prototype.",
+    ],
+    tech: ["React", "TypeScript", "Vite", "IoT", "Air Quality"],
+    githubUrl: "https://github.com/meherabmehu/DustTwin",
+    category: "Product prototype",
+    featured: true,
+  },
   {
     title: "FinPilot AI — Financial Copilot",
     context: "FinTechathon SME track · AIgnite 2026",
@@ -91,30 +117,6 @@ export const projects: Project[] = [
     tech: ["Python", "FastAPI", "React", "NASA OSDR", "Machine Learning", "SVG"],
     githubUrl: "https://github.com/meherabmehu/SpaceAgriSim",
     category: "Research & AI",
-    featured: true,
-  },
-  {
-    title: "AEGIS-ER — Emergency Response Platform",
-    context: "Geospatial decision-support system",
-    description: [
-      "Designed a command-centre workflow for emergency reports, response resources and live operating conditions.",
-      "Combines explainable triage with disruption-aware routing to support dispatch decisions under changing road conditions.",
-    ],
-    tech: ["Python", "FastAPI", "Geospatial Systems", "Leaflet", "Optimization"],
-    githubUrl: "https://github.com/meherabmehu/aegis-er-platform",
-    category: "Full-stack AI",
-    featured: true,
-  },
-  {
-    title: "Pre-Impact Fall Detection on ESP32",
-    context: "TinyML · wearable inertial sensing",
-    description: [
-      "Built a compact INT8 model that classifies motion windows as non-fall, alert or fall on an ESP32 using MPU6050 sensor data.",
-      "Trained and evaluated across public fall datasets, exported the model to TensorFlow Lite Micro and verified inference on physical hardware.",
-    ],
-    tech: ["TensorFlow", "TensorFlow Lite Micro", "ESP32", "C++", "TinyML"],
-    githubUrl: "https://github.com/meherabmehu/elderly_fall_detection",
-    category: "Edge AI",
     featured: true,
   },
   {
@@ -254,14 +256,6 @@ export const projects: Project[] = [
     category: "Full-stack AI",
   },
   {
-    title: "SasthoSetu — Digital Healthcare Platform",
-    context: "Personal Project",
-    description: ["Healthcare platform with patient and provider workflows, appointment management, medical records and AI-assisted health features, backed by a documented REST API."],
-    tech: ["Python", "FastAPI", "PostgreSQL", "React", "JWT", "AI"],
-    githubUrl: "https://github.com/meherabmehu/SasthoSetu",
-    category: "Full-stack AI",
-  },
-  {
     title: "Vantage Robotics Simulator",
     context: "Personal Project",
     description: ["Browser-based robot-arm control with forward/inverse kinematics, built with React, TypeScript, and Three.js"],
@@ -312,6 +306,11 @@ export const skills: { category: string; items: string[] }[] = [
 // ACHIEVEMENTS — competition wins and recognitions, most important first.
 // ----------------------------------------------------------------------------
 export const achievements: { title: string; note?: string; highlight?: boolean }[] = [
+  {
+    title: "Top 5 Team — Bangladesh Zonal Round, InnovateX Future Habitats Challenge (Techfest IIT Bombay 2026)",
+    note: "Team CTRL_V · DustTwin · Hosted at DUET, Gazipur",
+    highlight: true,
+  },
   { title: "First Runner-Up — bKash x NSUCEC Cybernauts 2026 Datathon Grand Finale", note: "National datathon", highlight: true },
   { title: "First Runner-Up — Data Hackathon, 5th National Data Science Summit (NDSS) 2026", note: "Daffodil International University", highlight: true },
   { title: "First Runner-Up — DUET CSE Carnival 2026 AI Hackathon", highlight: true },
@@ -356,24 +355,10 @@ export const leadership: { role: string; org: string; points: string[] }[] = [
 // ----------------------------------------------------------------------------
 // EDUCATION
 // ----------------------------------------------------------------------------
-export const education: { degree: string; school: string; period: string; note: string }[] = [
+export const education: { degree: string; school: string }[] = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
     school: "International University of Business Agriculture and Technology (IUBAT), Dhaka",
-    period: "Expected 2026",
-    note: "CGPA 3.52/4.00",
-  },
-  {
-    degree: "HSC (Science)",
-    school: "Govt. Nalchity College",
-    period: "2020",
-    note: "GPA 4.50/5.00",
-  },
-  {
-    degree: "SSC (Science)",
-    school: "Nandikathi Adarsha Secondary School",
-    period: "2018",
-    note: "GPA 4.28/5.00",
   },
 ];
 

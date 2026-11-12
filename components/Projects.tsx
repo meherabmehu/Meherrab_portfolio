@@ -5,7 +5,7 @@ import { Github, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import Reveal from "./Reveal";
 import { projects } from "@/content/data";
 
-const filters = ["All work", "Full-stack AI", "Research & AI", "Edge AI", "Full-stack"] as const;
+const filters = ["All work", "Full-stack AI", "Research & AI", "Product prototype", "Full-stack"] as const;
 const INITIAL_COUNT = 6;
 
 export default function Projects() {
@@ -74,11 +74,18 @@ export default function Projects() {
                     <span className="h-px w-7 bg-border" />
                     <span className="text-[10px] font-semibold uppercase tracking-[.16em] text-muted">{project.category}</span>
                   </div>
-                  {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition hover:border-accent/60 hover:text-accent">
-                      <Github size={15} />
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {project.demoUrl && (
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-accent/30 px-3 py-2 text-[11px] font-medium text-accent transition hover:border-accent/60 hover:bg-accent/10">
+                        Live demo <ArrowUpRight size={13} />
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition hover:border-accent/60 hover:text-accent">
+                        <Github size={15} />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <h3 className="max-w-xl text-xl font-semibold leading-snug tracking-tight text-ink sm:text-2xl">{project.title}</h3>

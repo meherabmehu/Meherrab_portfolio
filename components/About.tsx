@@ -1,11 +1,10 @@
 import Reveal from "./Reveal";
-import { profile, projects, achievements, education } from "@/content/data";
+import { profile, projects, achievements } from "@/content/data";
 
 const stats = [
-  { label: "Projects Shipped", value: `${projects.length}+` },
-  { label: "National Runner-Up Wins", value: `${achievements.filter((a) => a.highlight).length}` },
-  { label: "CGPA", value: education[0]?.note.replace("CGPA ", "") ?? "" },
-  { label: "Focus Areas", value: "AI · Product" },
+  { label: "Selected projects", value: `${projects.length}` },
+  { label: "National runner-up finishes", value: `${achievements.filter((a) => a.title.includes("Runner-Up")).length}` },
+  { label: "Focus", value: "AI · Software" },
 ];
 
 export default function About() {
@@ -28,12 +27,12 @@ export default function About() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 lg:col-span-2 lg:content-start">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:col-span-2 lg:grid-cols-1 lg:content-start">
           {stats.map((stat, index) => (
             <Reveal key={stat.label} delay={0.15 + index * 0.05}>
-              <div className="card-hover h-full rounded-2xl border border-border bg-card p-5 text-center shadow-sm">
-                <div className="gradient-text text-2xl font-bold sm:text-3xl">{stat.value}</div>
-                <div className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</div>
+              <div className="flex h-full items-center justify-between gap-4 rounded-xl border border-border bg-card/70 px-4 py-3.5 transition hover:border-accent/30">
+                <div className="text-xs text-muted sm:text-sm">{stat.label}</div>
+                <div className="shrink-0 text-base font-semibold text-ink sm:text-lg">{stat.value}</div>
               </div>
             </Reveal>
           ))}
