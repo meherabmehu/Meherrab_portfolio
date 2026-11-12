@@ -138,10 +138,10 @@ export const projects: Project[] = [
 // ----------------------------------------------------------------------------
 export const skills: { category: string; items: string[] }[] = [
   { category: "Languages", items: ["Python", "TypeScript", "JavaScript", "SQL"] },
-  { category: "Product Engineering", items: ["React", "Next.js", "Django", "FastAPI", "Node.js", "REST APIs"] },
-  { category: "Applied AI & ML", items: ["LLM Applications", "RAG", "Scikit-learn", "LightGBM", "XGBoost", "PyTorch"] },
-  { category: "Data", items: ["PostgreSQL", "Pandas", "NumPy", "Feature Engineering"] },
-  { category: "Engineering Tools", items: ["Git", "Docker", "GitHub Actions"] },
+  { category: "Product Engineering", items: ["React", "Next.js", "Tailwind CSS", "Django", "FastAPI", "Node.js", "Express", "REST APIs", "WebSockets"] },
+  { category: "Applied AI & ML", items: ["LLM Applications", "RAG", "LangChain", "Hugging Face", "Scikit-learn", "LightGBM", "XGBoost", "CatBoost", "PyTorch"] },
+  { category: "Data", items: ["PostgreSQL", "MySQL", "Pandas", "NumPy", "SQLAlchemy", "Feature Engineering"] },
+  { category: "Engineering Tools", items: ["Git", "Docker", "GitHub Actions", "JWT / RBAC", "Pytest"] },
 ];
 
 // ACHIEVEMENTS — competition wins and recognitions, most important first.

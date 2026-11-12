@@ -17,7 +17,7 @@ export default function Projects() {
               </p>
             </div>
             <a href="https://github.com/meherabmehu?tab=repositories" target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent transition hover:text-white">
-              Explore all repositories <ArrowUpRight size={16} />
+              GitHub <ArrowUpRight size={16} />
             </a>
           </div>
         </Reveal>
