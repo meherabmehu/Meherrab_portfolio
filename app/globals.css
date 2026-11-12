@@ -7,13 +7,13 @@ html {
 }
 
 body {
-  background-color: #0b0d0c;
-  background-image: radial-gradient(ellipse at 85% 4%, rgba(143, 191, 109, .07), transparent 34%);
+  background-color: #00040f;
+  background-image: radial-gradient(ellipse at 78% 3%, rgba(92, 225, 230, .075), transparent 34%);
 }
 
 ::selection {
-  background-color: rgba(40, 116, 82, 0.22);
-  color: #e7ede7;
+  background-color: rgba(92, 225, 230, 0.24);
+  color: #00040f;
 }
 
 /* thin, subtle scrollbar */
@@ -21,18 +21,18 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0d0c;
+  background: #00040f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #29332d;
+  background: #26354a;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #46564a;
+  background: #455261;
 }
 
 .gradient-text {
-  background-image: linear-gradient(90deg, #8fbf6d 0%, #a8d07f 55%, #d2a46e 100%);
+  background-image: linear-gradient(105deg, #5ce1e6 0%, #9dedf0 55%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -47,6 +47,6 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  border-color: rgba(143, 191, 109, 0.38);
-  box-shadow: 0 18px 42px -28px rgba(143, 191, 109, 0.35);
+  border-color: rgba(92, 225, 230, 0.42);
+  box-shadow: 0 18px 48px -28px rgba(92, 225, 230, 0.28);
 }

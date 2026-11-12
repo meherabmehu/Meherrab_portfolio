@@ -52,10 +52,116 @@ export type Project = {
   description: string[]; // bullet points
   tech: string[];
   githubUrl: string;
+  category: string;
   featured?: boolean; // featured projects render larger in the grid
 };
 
 export const projects: Project[] = [
+  {
+    title: "FinPilot AI — Financial Copilot",
+    context: "FinTechathon SME track · AIgnite 2026",
+    description: [
+      "Built a Django workspace for small businesses to track cash flow, investigate financial risks, compare recovery scenarios and monitor decisions.",
+      "Added an optional Groq-powered advisor with bounded, evidence-linked responses; includes a synthetic demo and documented evaluation limits.",
+    ],
+    tech: ["Python", "Django", "PostgreSQL", "Groq", "Financial Analytics"],
+    githubUrl: "https://github.com/meherabmehu/finpilot-ai-sme-copilot",
+    category: "Full-stack AI",
+    featured: true,
+  },
+  {
+    title: "StockWise AI — Inventory & Sales Intelligence",
+    context: "Full-stack business application",
+    description: [
+      "Built an inventory, POS and customer-management system with transactional stock updates, sales history and business settings.",
+      "Added calibrated 14-day demand forecasts and a PostgreSQL-grounded AI assistant for read-only questions about business data.",
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", "LLMs"],
+    githubUrl: "https://github.com/meherabmehu/stockwise-ai",
+    category: "Full-stack AI",
+    featured: true,
+  },
+  {
+    title: "SpaceAgriSim — Evidence-Aware Space Agriculture",
+    context: "Research software · controlled-environment crop scenarios",
+    description: [
+      "Created a responsive workspace joining an explainable crop-scenario simulator with a provenance-tracked NASA OSDR study catalogue.",
+      "Keeps model evidence and limitations visible; presented as a research prototype, not a calibrated mission digital twin.",
+    ],
+    tech: ["Python", "FastAPI", "React", "NASA OSDR", "Machine Learning", "SVG"],
+    githubUrl: "https://github.com/meherabmehu/SpaceAgriSim",
+    category: "Research & AI",
+    featured: true,
+  },
+  {
+    title: "AEGIS-ER — Emergency Response Platform",
+    context: "Geospatial decision-support system",
+    description: [
+      "Designed a command-centre workflow for emergency reports, response resources and live operating conditions.",
+      "Combines explainable triage with disruption-aware routing to support dispatch decisions under changing road conditions.",
+    ],
+    tech: ["Python", "FastAPI", "Geospatial Systems", "Leaflet", "Optimization"],
+    githubUrl: "https://github.com/meherabmehu/aegis-er-platform",
+    category: "Full-stack AI",
+    featured: true,
+  },
+  {
+    title: "Pre-Impact Fall Detection on ESP32",
+    context: "TinyML · wearable inertial sensing",
+    description: [
+      "Built a compact INT8 model that classifies motion windows as non-fall, alert or fall on an ESP32 using MPU6050 sensor data.",
+      "Trained and evaluated across public fall datasets, exported the model to TensorFlow Lite Micro and verified inference on physical hardware.",
+    ],
+    tech: ["TensorFlow", "TensorFlow Lite Micro", "ESP32", "C++", "TinyML"],
+    githubUrl: "https://github.com/meherabmehu/elderly_fall_detection",
+    category: "Edge AI",
+    featured: true,
+  },
+  {
+    title: "Bangladesh Dengue 7-Day Onset Warning",
+    context: "Public-health ML research · development stage",
+    description: [
+      "Built a leakage-aware pipeline to study whether available signals can warn of dengue outbreak onset seven days ahead.",
+      "Compared seasonal and recent-trend rules with regularized logistic regression and LightGBM; the reserved 2025 test period remains unevaluated.",
+    ],
+    tech: ["Python", "LightGBM", "TCN", "GRU", "Time-Series Validation"],
+    githubUrl: "https://github.com/meherabmehu/bd-dengue-7day-onset-warning",
+    category: "Research & AI",
+    featured: true,
+  },
+  {
+    title: "GridWise — LLM Energy Optimizer",
+    context: "BUP CSE Fest 2026 · Online Preliminary · 10/10 official cases matched the published optimum",
+    description: [
+      "Turns short operator notes into validated, machine-checkable constraints for a 24-hour campus energy schedule.",
+      "Separates language-model interpretation from a deterministic linear-programming optimizer so schedules can be checked against the rules.",
+    ],
+    tech: ["Python", "FastAPI", "LLMs", "Linear Programming", "HiGHS"],
+    githubUrl: "https://github.com/meherabmehu/GridWise-LLM-Energy-Optimizer",
+    category: "Full-stack AI",
+  },
+  {
+    title: "Codebase Onboarding Agent",
+    context: "RAG-powered developer learning assistant",
+    description: [
+      "Built an assistant that explains a repository through its code and evolution history, with architecture mapping, learning plans, Q&A and quizzes.",
+      "Split the Streamlit learning interface from a FastAPI service for parsing, indexing and agent workflows.",
+    ],
+    tech: ["Python", "FastAPI", "Streamlit", "RAG", "Agent Workflows"],
+    githubUrl: "https://github.com/meherabmehu/codebase-onboarding-agent",
+    category: "Full-stack AI",
+  },
+  {
+    title: "Samsung Phone Query & Review System",
+    context: "RAG and multi-agent application · internship project",
+    description: [
+      "Scrapes Samsung phone specifications and reviews, stores structured records in PostgreSQL and serves them through a FastAPI application.",
+      "Uses retrieval-grounded answers for product questions and a multi-agent pipeline to analyze reviews.",
+    ],
+    tech: ["Python", "FastAPI", "PostgreSQL", "RAG", "Multi-agent AI"],
+    githubUrl: "https://github.com/meherabmehu/samsung-phone-query-review-system",
+    category: "Full-stack AI",
+  },
   {
     title: "Customer Churn Prediction Using Survival Analysis",
     context: "bKash x NSUCEC Cybernauts 2026 Datathon Grand Finale — First Runner-Up",
@@ -65,6 +171,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "LightGBM", "XGBoost", "CatBoost", "Scikit-learn", "Pandas"],
     githubUrl: "https://github.com/meherabmehu/Customer-Churn-Prediction-using-Survival-Analysis-",
+    category: "Research & AI",
     featured: true,
   },
   {
@@ -76,6 +183,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "PyTorch", "YOLO11", "Ultralytics", "OpenCV"],
     githubUrl: "https://github.com/meherabmehu/RoadVision-AI-Powered-Traffic-Detection-Vehicle-Classification-",
+    category: "Research & AI",
     featured: true,
   },
   {
@@ -87,6 +195,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "Scikit-learn", "Pandas", "NumPy"],
     githubUrl: "https://github.com/meherabmehu/Starship-Safety-NDSS-2026",
+    category: "Research & AI",
     featured: true,
   },
   {
@@ -98,6 +207,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "LangChain", "LLMs", "RAG", "Qdrant", "Computer Vision", "Docker", "GitHub Actions"],
     githubUrl: "https://github.com/meherabmehu/Multi_Agent_Medical_Service",
+    category: "Full-stack AI",
   },
   {
     title: "Bengali LLM Hallucination Detection",
@@ -108,6 +218,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "PyTorch", "Hugging Face Transformers", "llama.cpp", "RapidFuzz"],
     githubUrl: "https://github.com/meherabmehu/Bengali-Hallucination-Detection",
+    category: "Research & AI",
   },
   {
     title: "PM2.5 Air Quality Forecasting for Dhaka",
@@ -118,6 +229,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "TensorFlow", "LightGBM", "SHAP", "Time-Series Analysis"],
     githubUrl: "https://github.com/meherabmehu/PM2.5-Air-Quality-Forecasting-for-Dhaka-",
+    category: "Research & AI",
   },
   {
     title: "FinNova — Financial Transaction Risk Detection",
@@ -128,6 +240,7 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "Scikit-learn", "LightGBM", "XGBoost", "CatBoost"],
     githubUrl: "https://github.com/meherabmehu/finnova-risk-transaction-detection",
+    category: "Research & AI",
   },
   {
     title: "Office Energy Monitor — IoT Energy Intelligence Platform",
@@ -138,13 +251,15 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "FastAPI", "React", "WebSockets", "SQLAlchemy", "ESP32", "IoT"],
     githubUrl: "https://github.com/meherabmehu/office-energy-monitor",
+    category: "Full-stack AI",
   },
   {
-    title: "SasthoSetu — Healthcare Platform Backend",
+    title: "SasthoSetu — Digital Healthcare Platform",
     context: "Personal Project",
-    description: ["FastAPI + PostgreSQL healthcare backend with JWT/OAuth2 authentication, symptom checking, and appointment scheduling"],
-    tech: ["Python", "FastAPI", "PostgreSQL", "JWT", "OAuth2"],
+    description: ["Healthcare platform with patient and provider workflows, appointment management, medical records and AI-assisted health features, backed by a documented REST API."],
+    tech: ["Python", "FastAPI", "PostgreSQL", "React", "JWT", "AI"],
     githubUrl: "https://github.com/meherabmehu/SasthoSetu",
+    category: "Full-stack AI",
   },
   {
     title: "Vantage Robotics Simulator",
@@ -152,6 +267,7 @@ export const projects: Project[] = [
     description: ["Browser-based robot-arm control with forward/inverse kinematics, built with React, TypeScript, and Three.js"],
     tech: ["React", "TypeScript", "Three.js", "Robotics"],
     githubUrl: "https://github.com/meherabmehu/vantage-robotics-simulator",
+    category: "Full-stack",
   },
   {
     title: "Cirrhosis Outcome Prediction",
@@ -159,6 +275,7 @@ export const projects: Project[] = [
     description: ["Multi-class clinical outcome classification with EDA, feature engineering, and stratified cross-validation"],
     tech: ["Python", "LightGBM", "Pandas", "Scikit-learn"],
     githubUrl: "https://github.com/meherabmehu/Cirrhossis-Outcome-prediction",
+    category: "Research & AI",
   },
 ];
 

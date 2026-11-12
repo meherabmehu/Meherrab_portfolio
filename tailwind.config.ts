@@ -6,15 +6,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#e7ede7",
-        muted: "#9aa79d",
-        surface: "#0b0d0c",
-        surface2: "#141916",
-        card: "#171d19",
-        border: "#29332d",
-        accent: "#8fbf6d",
-        accent2: "#a8d07f",
-        accent3: "#d2a46e",
+        ink: "#ffffff",
+        muted: "#ffffffb8",
+        surface: "#00040f",
+        surface2: "#111a2e",
+        card: "#0a1020",
+        border: "#ffffff1f",
+        accent: "#5ce1e6",
+        accent2: "#9dedf0",
+        accent3: "#33bbcf",
       },
       fontFamily: {
         sans: ["Inter Variable", "system-ui", "sans-serif"],
@@ -24,11 +24,11 @@ const config: Config = {
         "grid-pattern":
           "linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px)",
         "hero-glow":
-          "radial-gradient(60% 50% at 50% 0%, rgba(143,191,109,0.16) 0%, rgba(76,111,73,0.08) 48%, rgba(11,13,12,0) 76%)",
-        "accent-gradient": "linear-gradient(120deg, #628c4d 0%, #8fbf6d 100%)",
+          "radial-gradient(60% 54% at 50% 0%, rgba(92,225,230,0.15) 0%, rgba(33,77,118,0.12) 42%, rgba(0,4,15,0) 76%)",
+        "accent-gradient": "linear-gradient(120deg, #33bbcf 0%, #5ce1e6 100%)",
       },
       boxShadow: {
-        glow: "0 14px 40px -20px rgba(143,191,109,0.42)",
+        glow: "0 14px 48px -22px rgba(92,225,230,0.48)",
       },
       keyframes: {
         float: {
