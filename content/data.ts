@@ -72,15 +72,28 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "DustTwin — Construction Dust Monitoring",
-    context: "Top 5 · Bangladesh Zonal Round, InnovateX Future Habitats Challenge · Techfest IIT Bombay 2026",
+    title: "Customer Churn Prediction — Survival Analysis",
+    context: "bKash × NSUCEC Cybernauts 2026 Datathon · First Runner-Up",
     description: [
-      "Designed a multi-page monitoring experience for construction-site dust, environmental sensing, and targeted misting scenarios.",
-      "Built interactive simulation and circuit-demo views for the team project; currently presented as a prototype.",
+      "Reframed churn as a time-to-event problem and engineered 152 behavioral features from millions of transaction records.",
+      "Built and calibrated a LightGBM, XGBoost and CatBoost ensemble to estimate churn risk and time-to-churn.",
     ],
-    tech: ["React", "TypeScript", "Vite", "IoT", "Air Quality"],
-    githubUrl: "https://github.com/meherabmehu/DustTwin",
-    category: "Product prototype",
+    tech: ["Python", "Survival Analysis", "LightGBM", "XGBoost", "CatBoost"],
+    githubUrl: "https://github.com/meherabmehu/Customer-Churn-Prediction-using-Survival-Analysis-",
+    category: "Research & AI",
+    featured: true,
+  },
+  {
+    title: "RC Property Development — Property Platform",
+    context: "Bilingual real-estate website · live deployment",
+    description: [
+      "Rebuilt a responsive property-development site from 14 design boards using reusable Django templates, local assets and shared design tokens.",
+      "Implemented property discovery, detail pages, English/Bangla language switching and an inquiry flow.",
+    ],
+    tech: ["Python", "Django", "JavaScript", "HTML/CSS", "Vercel"],
+    githubUrl: "https://github.com/meherabmehu/rcpdl-property-platform",
+    demoUrl: "https://rcpdl-property-platform.vercel.app",
+    category: "Full-stack",
     featured: true,
   },
   {
@@ -163,30 +176,6 @@ export const projects: Project[] = [
     tech: ["Python", "FastAPI", "PostgreSQL", "RAG", "Multi-agent AI"],
     githubUrl: "https://github.com/meherabmehu/samsung-phone-query-review-system",
     category: "Full-stack AI",
-  },
-  {
-    title: "Customer Churn Prediction Using Survival Analysis",
-    context: "bKash x NSUCEC Cybernauts 2026 Datathon Grand Finale — First Runner-Up",
-    description: [
-      "Reframed churn as a time-to-event problem and engineered 152 behavioral features from millions of transaction records",
-      "Calibrated a LightGBM + XGBoost + CatBoost ensemble with rigorous cross-validation to score churn risk and time-to-churn",
-    ],
-    tech: ["Python", "LightGBM", "XGBoost", "CatBoost", "Scikit-learn", "Pandas"],
-    githubUrl: "https://github.com/meherabmehu/Customer-Churn-Prediction-using-Survival-Analysis-",
-    category: "Research & AI",
-    featured: true,
-  },
-  {
-    title: "RoadVision — AI-Powered Traffic Detection & Vehicle Classification",
-    context: "DUET CSE Carnival 2026 AI Hackathon — First Runner-Up",
-    description: [
-      "Trained a YOLO11 (Ultralytics) detector for multi-class vehicle identification on Bangladesh highway surveillance footage",
-      "Built the augmentation and hyperparameter-tuning pipeline; delivered real-time inference evaluated with mAP@50/50–95",
-    ],
-    tech: ["Python", "PyTorch", "YOLO11", "Ultralytics", "OpenCV"],
-    githubUrl: "https://github.com/meherabmehu/RoadVision-AI-Powered-Traffic-Detection-Vehicle-Classification-",
-    category: "Research & AI",
-    featured: true,
   },
   {
     title: "Starship Safety — System Failure Prediction",
@@ -308,7 +297,7 @@ export const skills: { category: string; items: string[] }[] = [
 export const achievements: { title: string; note?: string; highlight?: boolean }[] = [
   {
     title: "Top 5 Team — Bangladesh Zonal Round, InnovateX Future Habitats Challenge (Techfest IIT Bombay 2026)",
-    note: "Team CTRL_V · DustTwin · Hosted at DUET, Gazipur",
+    note: "Team CTRL_V · Hosted at DUET, Gazipur",
     highlight: true,
   },
   { title: "First Runner-Up — bKash x NSUCEC Cybernauts 2026 Datathon Grand Finale", note: "National datathon", highlight: true },

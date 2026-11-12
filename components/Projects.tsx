@@ -5,7 +5,7 @@ import { Github, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import Reveal from "./Reveal";
 import { projects } from "@/content/data";
 
-const filters = ["All work", "Full-stack AI", "Research & AI", "Product prototype", "Full-stack"] as const;
+const filters = ["All work", "Full-stack AI", "Research & AI", "Full-stack"] as const;
 const INITIAL_COUNT = 6;
 
 export default function Projects() {
